@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}About - Data Engineer Portfolio{% endblock %}
+
+{% block content %}
+<section class="about-page">
+    <div class="container">
+        <h1>About Me</h1>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Data Engineer & Analytics Professional</h2>
+                <p>
+                    I'm a passionate data engineer with 5+ years of experience designing and building 
+                    scalable data pipelines and analytics solutions. I specialize in ETL development, 
+                    data warehouse design, and real-time analytics.
+                </p>
+                
+                <h3>Background</h3>
+                <p>
+                    My journey in data engineering started with a strong foundation in software engineering, 
+                    which I've leveraged to build robust, maintainable data systems. I've worked with 
+                    organizations to solve complex data challenges and enable data-driven decision making.
+                </p>
+                
+                <h3>What I Do</h3>
+                <ul class="about-list">
+                    <li><strong>ETL Development:</strong> Design and implement data pipelines using Apache Airflow, Spark, and Kafka</li>
+                    <li><strong>Data Warehousing:</strong> Build and optimize data warehouses on Snowflake, BigQuery, and PostgreSQL</li>
+                    <li><strong>Real-time Analytics:</strong> Create streaming data solutions for real-time insights</li>
+                    <li><strong>Data Quality:</strong> Implement data quality frameworks and monitoring systems</li>
+                    <li><strong>Cloud Solutions:</strong> Architect solutions on AWS, GCP, and Azure</li>
+                </ul>
+                
+                <h3>Core Competencies</h3>
+                <div class="competencies">
+                    <div class="competency">
+                        <h4>Data Pipeline Architecture</h4>
+                        <p>Designing scalable, resilient data pipelines for high-volume data processing</p>
+                    </div>
+                    <div class="competency">
+                        <h4>Cloud Technologies</h4>
+                        <p>Building solutions on AWS, GCP, and Azure with best practices for scalability</p>
+                    </div>
+                    <div class="competency">
+                        <h4>Data Warehousing</h4>
+                        <p>Designing normalized and denormalized schemas for optimal query performance</p>
+                    </div>
+                    <div class="competency">
+                        <h4>Automation & DevOps</h4>
+                        <p>Implementing CI/CD pipelines and infrastructure-as-code for data systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="contact-section" id="contact">
+            <h2>Let's Connect</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="contact-link">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</section>
+{% endblock %}

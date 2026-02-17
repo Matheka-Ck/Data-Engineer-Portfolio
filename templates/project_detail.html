@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} - Data Engineer Portfolio{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> / <a href="/projects">Projects</a> / <span>{{ project.title }}</span>
+        </div>
+        
+        <div class="project-header-detail">
+            <h1>{{ project.title }}</h1>
+            <div class="project-meta">
+                <span class="category-badge">{{ project.category }}</span>
+                <span class="date">{{ project.date }}</span>
+            </div>
+        </div>
+        
+        <div class="project-content">
+            <div class="main-content">
+                <h2>Overview</h2>
+                <p>{{ project.long_description }}</p>
+                
+                <h2>Technologies Used</h2>
+                <div class="tech-stack-detailed">
+                    {% for tech in project.technologies %}
+                    <span class="tech-tag-large">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                
+                <h2>Key Features</h2>
+                <ul class="features-list">
+                    <li>Scalable architecture handling large data volumes</li>
+                    <li>Automated monitoring and alerting</li>
+                    <li>Comprehensive documentation and testing</li>
+                    <li>Production-ready implementation</li>
+                </ul>
+            </div>
+            
+            <aside class="project-sidebar">
+                <div class="sidebar-box">
+                    <h3>Resources</h3>
+                    {% if project.files %}
+                    <div class="files-list">
+                        {% for file in project.files %}
+                        <a href="{{ file.url }}" class="file-link" target="_blank">
+                            <i class="fas fa-download"></i> {{ file.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="sidebar-box">
+                    <h3>Links</h3>
+                    {% if project.links %}
+                    <div class="links-list">
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" target="_blank" class="external-link">
+                            {{ link.text }} <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </aside>
+        </div>
+        
+        <div class="back-link">
+            <a href="/projects" class="btn btn-secondary">← Back to Projects</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

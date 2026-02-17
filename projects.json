@@ -1,0 +1,74 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "ETL Pipeline for E-commerce Data",
+        "category": "ETL",
+        "description": "Designed and implemented a scalable ETL pipeline using Apache Airflow to process 50GB+ of daily e-commerce transaction data, reducing data processing time by 60%.",
+        "long_description": "This project involved designing a complete ETL solution that extracts data from multiple sources (PostgreSQL, APIs), transforms it using Pandas and PySpark, and loads it into a data warehouse. The pipeline handles 50GB+ of data daily and includes comprehensive error handling and monitoring.",
+        "technologies": ["Python", "Apache Airflow", "PostgreSQL", "PySpark", "AWS S3"],
+        "date": "2024-06-15",
+        "image": "url_to_image",
+        "links": [
+          {
+            "text": "GitHub Repository",
+            "url": "https://github.com/yourusername/etl-pipeline"
+          }
+        ],
+        "files": [
+          {
+            "name": "Project Report",
+            "url": "/download/etl_pipeline_report.pdf"
+          },
+          {
+            "name": "Code Repository",
+            "url": "https://github.com/yourusername/etl-pipeline"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Real-time Analytics Dashboard",
+        "category": "Analytics",
+        "description": "Built an interactive real-time analytics dashboard using Elasticsearch and Kibana, enabling stakeholders to monitor business metrics in real-time.",
+        "long_description": "Created a comprehensive analytics dashboard that ingests streaming data using Kafka, stores it in Elasticsearch, and visualizes it through custom Kibana dashboards. The system processes 1M+ events per minute with sub-second latency.",
+        "technologies": ["Elasticsearch", "Kibana", "Kafka", "Python", "Docker"],
+        "date": "2024-05-20",
+        "image": "url_to_image",
+        "links": [
+          {
+            "text": "GitHub Repository",
+            "url": "https://github.com/yourusername/analytics-dashboard"
+          }
+        ],
+        "files": [
+          {
+            "name": "Architecture Diagram",
+            "url": "/download/dashboard_architecture.pdf"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Data Quality Framework",
+        "category": "Framework",
+        "description": "Developed an automated data quality monitoring framework that detects anomalies and data inconsistencies across 200+ data sources.",
+        "long_description": "Built a comprehensive data quality framework using Great Expectations that automatically validates data against defined rules, tracks data lineage, and alerts teams to anomalies. Covers 200+ data sources and achieves 99.5% accuracy in anomaly detection.",
+        "technologies": ["Great Expectations", "Python", "PostgreSQL", "DBT", "Datadog"],
+        "date": "2024-04-10",
+        "image": "url_to_image",
+        "links": [
+          {
+            "text": "GitHub Repository",
+            "url": "https://github.com/yourusername/data-quality-framework"
+          }
+        ],
+        "files": [
+          {
+            "name": "Framework Documentation",
+            "url": "/download/dq_framework_docs.pdf"
+          }
+        ]
+      }
+    ]
+  }

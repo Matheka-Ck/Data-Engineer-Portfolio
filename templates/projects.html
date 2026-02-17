@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Data Engineer Portfolio{% endblock %}
+
+{% block content %}
+<section class="projects-page">
+    <div class="container">
+        <h1>My Projects</h1>
+        <p class="page-subtitle">A collection of data engineering and analytics projects I've worked on</p>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ETL">ETL</button>
+            <button class="filter-btn" data-filter="Analytics">Analytics</button>
+            <button class="filter-btn" data-filter="Framework">Framework</button>
+        </div>
+        
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card" data-category="{{ project.category }}">
+                <div class="project-header">
+                    <span class="category-badge">{{ project.category }}</span>
+                    <span class="date">{{ project.date }}</span>
+                </div>
+                
+                <h3>{{ project.title }}</h3>
+                <p class="description">{{ project.description }}</p>
+                
+                <div class="tech-stack">
+                    {% for tech in project.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="project-actions">
+                    <a href="/projects/{{ project.id }}" class="btn btn-small">View Details</a>
+                    {% if project.links %}
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" target="_blank" class="btn btn-small btn-secondary">
+                            {{ link.text }}
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
