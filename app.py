@@ -14,11 +14,13 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 
 def load_projects():
-    """Load projects from JSON file"""
+    """Load projects from JSON file and return a list of projects"""
     try:
         with open('projects.json', 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
+            data = json.load(f)
+            # Ensure we return a list of projects
+            return data.get('projects', [])
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 
@@ -31,7 +33,7 @@ def index():
 
 
 @app.route('/projects')
-def projects():
+def projects_page():
     """Projects page"""
     projects = load_projects()
     return render_template('projects.html', projects=projects)
